@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Mail, Phone, MapPin, Send } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -34,35 +34,35 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 bg-black text-white">
+    <section id="contact" className="py-32 bg-[#E8524A] text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 block">
+          <span className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4 block">
             Start Your Project
           </span>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
             LET&apos;S BUILD
             <br />
-            <span className="text-gray-500">SOMETHING GREAT</span>
+            <span className="text-white/70">SOMETHING GREAT</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">
             Ready to scale? Tell us about your project and we&apos;ll get back 
-            to you within 24 hours with a strategic roadmap.
+            to you with a strategic roadmap.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <div className="bg-white text-black p-8 md:p-12">
+          <div className="bg-white text-black p-8 md:p-12 rounded-lg shadow-2xl">
             {isSubmitted ? (
               <div className="text-center py-12">
-                <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-[#E8524A] text-white rounded-full flex items-center justify-center mx-auto mb-6">
                   <Send className="w-8 h-8" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
                 <p className="text-gray-600">
-                  We&apos;ll be in touch within 24 hours to discuss your project.
+                  We&apos;ll be in touch soon to discuss your project.
                 </p>
               </div>
             ) : (
@@ -78,7 +78,7 @@ export default function Contact() {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors rounded"
                       placeholder="John Doe"
                     />
                   </div>
@@ -92,7 +92,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors rounded"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -108,7 +108,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors rounded"
                       placeholder="Your Company"
                     />
                   </div>
@@ -120,7 +120,7 @@ export default function Contact() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors bg-white rounded"
                     >
                       <option value="">Select a service</option>
                       <option value="web">Web Development</option>
@@ -140,7 +140,7 @@ export default function Contact() {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors bg-white rounded"
                   >
                     <option value="">Select budget range</option>
                     <option value="5k-10k">$5,000 - $10,000</option>
@@ -160,7 +160,7 @@ export default function Contact() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors resize-none rounded"
                     placeholder="Tell us about your goals, challenges, and what success looks like..."
                   />
                 </div>
@@ -168,7 +168,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-black text-white py-4 font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 disabled:opacity-50"
+                  className="w-full bg-[#E8524A] text-white py-4 font-bold uppercase tracking-widest hover:bg-[#d14a43] transition-colors flex items-center justify-center gap-3 disabled:opacity-50 rounded"
                 >
                   {isSubmitting ? (
                     <>
@@ -190,7 +190,7 @@ export default function Contact() {
           <div className="space-y-12">
             <div>
               <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-              <p className="text-gray-400 leading-relaxed mb-8">
+              <p className="text-white/70 leading-relaxed mb-8">
                 Whether you have a specific project in mind or just want to explore 
                 possibilities, we&apos;d love to hear from you. Every great partnership 
                 starts with a conversation.
@@ -202,44 +202,23 @@ export default function Contact() {
                 href="mailto:hello@hustlr.com" 
                 className="flex items-center gap-4 group"
               >
-                <div className="w-14 h-14 bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                <div className="w-14 h-14 bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-[#E8524A] transition-all rounded">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wide">Email</div>
+                  <div className="text-sm text-white/60 uppercase tracking-wide">Email</div>
                   <div className="font-semibold">hello@hustlr.com</div>
                 </div>
               </a>
 
-              <a 
-                href="tel:+60123456789" 
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-14 h-14 bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wide">Phone</div>
-                  <div className="font-semibold">+60 12-345 6789</div>
-                </div>
-              </a>
-
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-white/10 flex items-center justify-center">
+                <div className="w-14 h-14 bg-white/10 flex items-center justify-center rounded">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-400 uppercase tracking-wide">Office</div>
-                  <div className="font-semibold">Kuala Lumpur, Malaysia</div>
+                  <div className="text-sm text-white/60 uppercase tracking-wide">Office</div>
+                  <div className="font-semibold">Raffles Place, Singapore</div>
                 </div>
-              </div>
-            </div>
-
-            {/* Response Time */}
-            <div className="pt-8 border-t border-white/10">
-              <div className="flex items-center gap-3 text-sm text-gray-400">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                Typically responds within 24 hours
               </div>
             </div>
           </div>

@@ -60,11 +60,11 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-32 bg-black text-white">
+    <section id="services" ref={sectionRef} className="py-32 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 block">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#E8524A] mb-4 block">
             What We Do
           </span>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
@@ -86,17 +86,17 @@ export default function Services() {
               <div
                 key={index}
                 data-index={index}
-                className={`group p-8 border border-gray-800 hover:border-white transition-all duration-500 cursor-pointer ${
+                className={`group p-8 border border-gray-800 hover:border-[#E8524A] transition-all duration-500 cursor-pointer rounded-lg ${
                   visibleItems.includes(index)
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div className="w-14 h-14 bg-white text-black flex items-center justify-center">
+                  <div className="w-14 h-14 bg-[#E8524A] text-white flex items-center justify-center rounded">
                     <Icon className="w-7 h-7" />
                   </div>
-                  <ArrowRight className="w-6 h-6 text-gray-600 group-hover:text-white group-hover:translate-x-2 transition-all" />
+                  <ArrowRight className="w-6 h-6 text-gray-600 group-hover:text-[#E8524A] group-hover:translate-x-2 transition-all" />
                 </div>
 
                 <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
@@ -107,7 +107,7 @@ export default function Services() {
                 <ul className="space-y-2">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center text-sm text-gray-500">
-                      <span className="w-1.5 h-1.5 bg-white rounded-full mr-3"></span>
+                      <span className="w-1.5 h-1.5 bg-[#E8524A] rounded-full mr-3"></span>
                       {feature}
                     </li>
                   ))}
@@ -121,7 +121,7 @@ export default function Services() {
         <div className="text-center mt-16">
           <a
             href="#contact"
-            className="inline-flex items-center gap-3 bg-white text-black px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"
+            className="inline-flex items-center gap-3 bg-[#E8524A] text-white px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-[#d14a43] transition-colors rounded"
           >
             Discuss Your Needs
             <ArrowRight className="w-5 h-5" />

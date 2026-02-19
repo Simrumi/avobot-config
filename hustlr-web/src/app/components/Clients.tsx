@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 
 const clients = [
-  { name: "Melissa", url: "https://melissa.my/" },
-  { name: "Nature's Wonders", url: "#" },
+  { name: "Melissa", url: "https://melissa.my/", image: "/melissa-logo.png" },
+  { name: "Nature's Wonders", url: "#", image: "/natures-wonders-logo.png" },
   { name: "Alibaba", url: "#" },
   { name: "Honda", url: "#" },
   { name: "Axiata", url: "#" },
@@ -33,15 +33,15 @@ export default function Clients() {
   }, []);
 
   return (
-    <section id="clients" ref={sectionRef} className="py-24 bg-gray-50">
+    <section id="clients" ref={sectionRef} className="py-24 bg-[#E8524A]/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4 block">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#E8524A] mb-4 block">
             Trusted By Industry Leaders
           </span>
-          <h2 className="text-3xl md:text-5xl font-black tracking-tighter">
-            BRANDS WE'VE ELEVATED
+          <h2 className="text-3xl md:text-5xl font-black tracking-tighter text-gray-900">
+            BRANDS WE&apos;VE ELEVATED
           </h2>
         </div>
 
@@ -61,26 +61,28 @@ export default function Clients() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <div className="text-center">
-                <div className="text-xl md:text-2xl font-black text-gray-400 group-hover:text-black transition-colors tracking-tight">
-                  {client.name === "Melissa" && (
-                    <span className="font-serif italic">melissa</span>
-                  )}
-                  {client.name === "Nature's Wonders" && (
-                    <span className="text-sm md:text-base">Nature&apos;s<br/>Wonders</span>
-                  )}
-                  {client.name === "Alibaba" && (
-                    <span className="font-bold">Alibaba</span>
-                  )}
-                  {client.name === "Honda" && (
-                    <span className="tracking-widest">HONDA</span>
-                  )}
-                  {client.name === "Axiata" && (
-                    <span className="font-bold text-blue-600 group-hover:text-blue-700">axiata</span>
-                  )}
-                  {client.name === "Mr. Money TV" && (
-                    <span className="text-sm md:text-base">Mr. Money<br/><span className="text-xs">TV</span></span>
-                  )}
-                </div>
+                {client.image ? (
+                  <img 
+                    src={client.image} 
+                    alt={client.name}
+                    className="h-16 w-auto object-contain opacity-70 group-hover:opacity-100 transition-opacity"
+                  />
+                ) : (
+                  <div className="text-xl md:text-2xl font-black text-gray-400 group-hover:text-[#E8524A] transition-colors tracking-tight">
+                    {client.name === "Alibaba" && (
+                      <span className="font-bold">Alibaba</span>
+                    )}
+                    {client.name === "Honda" && (
+                      <span className="tracking-widest">HONDA</span>
+                    )}
+                    {client.name === "Axiata" && (
+                      <span className="font-bold">axiata</span>
+                    )}
+                    {client.name === "Mr. Money TV" && (
+                      <span className="text-sm md:text-base">Mr. Money<br/><span className="text-xs">TV</span></span>
+                    )}
+                  </div>
+                )}
               </div>
             </a>
           ))}
@@ -93,7 +95,7 @@ export default function Clients() {
             to content and performance marketing delivered a 340% ROI in the first quarter.&rdquo;
           </blockquote>
           <div className="flex items-center justify-center gap-4">
-            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white font-bold">
+            <div className="w-12 h-12 bg-[#E8524A] rounded-full flex items-center justify-center text-white font-bold">
               M
             </div>
             <div className="text-left">

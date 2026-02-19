@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "HUSTLR | Digital Marketing Agency",
   description: "Premium digital marketing services: Web Development, Social Media Management, Content Creation & Performance Marketing.",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' }
+    ],
+  },
 };
 
 export default function RootLayout({

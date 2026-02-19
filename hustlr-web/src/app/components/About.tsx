@@ -58,7 +58,7 @@ export default function About() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <span className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-4 block">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#E8524A] mb-4 block">
               About HUSTLR
             </span>
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8">
@@ -68,7 +68,7 @@ export default function About() {
               <br />
               WE&apos;RE YOUR
               <br />
-              <span className="text-black">GROWTH TEAM.</span>
+              <span className="text-[#E8524A]">GROWTH TEAM.</span>
             </h2>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
@@ -89,15 +89,15 @@ export default function About() {
             {/* Stats Row */}
             <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
               <div>
-                <div className="text-3xl font-black mb-1">7+</div>
+                <div className="text-3xl font-black mb-1 text-[#E8524A]">7+</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wide">Years Active</div>
               </div>
               <div>
-                <div className="text-3xl font-black mb-1">25</div>
+                <div className="text-3xl font-black mb-1 text-[#E8524A]">25</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wide">Team Members</div>
               </div>
               <div>
-                <div className="text-3xl font-black mb-1">3</div>
+                <div className="text-3xl font-black mb-1 text-[#E8524A]">3</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wide">Global Offices</div>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function About() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <div className="aspect-square bg-black relative overflow-hidden">
+            <div className="aspect-square bg-[#E8524A] relative overflow-hidden rounded-lg shadow-2xl">
               {/* Abstract Pattern */}
               <div className="absolute inset-0 opacity-20">
                 <div className="absolute inset-0" style={{
@@ -140,12 +140,12 @@ export default function About() {
             return (
               <div
                 key={index}
-                className={`p-6 border border-gray-200 hover:border-black transition-all duration-300 group ${
+                className={`p-6 border border-gray-200 hover:border-[#E8524A] transition-all duration-300 group rounded-lg ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${(index + 2) * 150}ms` }}
               >
-                <div className="w-12 h-12 bg-black text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-[#E8524A] text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform rounded">
                   <Icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{value.title}</h3>

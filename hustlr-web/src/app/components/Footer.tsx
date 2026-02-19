@@ -33,7 +33,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <span className="text-3xl font-black tracking-tighter">HUSTLR</span>
+              <img 
+                src="/hustlr-logo.jpg" 
+                alt="HUSTLR" 
+                className="h-12 w-auto rounded"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Strategic digital marketing that drives measurable growth. We turn brands into movements.
@@ -47,7 +51,7 @@ export default function Footer() {
                     key={index}
                     href={item.href}
                     aria-label={item.label}
-                    className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all"
+                    className="w-10 h-10 bg-[#E8524A] flex items-center justify-center hover:bg-white hover:text-[#E8524A] transition-all rounded"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -58,13 +62,13 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Services</h4>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-[#E8524A]">Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-gray-400 hover:text-[#E8524A] transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -75,13 +79,13 @@ export default function Footer() {
 
           {/* Company Column */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Company</h4>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-[#E8524A]">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-gray-400 hover:text-[#E8524A] transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -92,7 +96,7 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-6">Stay Updated</h4>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-[#E8524A]">Stay Updated</h4>
             <p className="text-gray-400 text-sm mb-4">
               Get the latest insights on digital marketing and growth strategies.
             </p>
@@ -100,11 +104,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-white transition-colors"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#E8524A] transition-colors rounded-l"
               />
               <button
                 type="submit"
-                className="px-4 py-3 bg-white text-black font-semibold text-sm hover:bg-gray-200 transition-colors"
+                className="px-4 py-3 bg-[#E8524A] text-white font-semibold text-sm hover:bg-[#d14a43] transition-colors rounded-r"
               >
                 Subscribe
               </button>
@@ -118,10 +122,10 @@ export default function Footer() {
             {currentYear} HUSTLR. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">
+            <a href="#" className="text-gray-500 hover:text-[#E8524A] transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors">
+            <a href="#" className="text-gray-500 hover:text-[#E8524A] transition-colors">
               Terms of Service
             </a>
           </div>

@@ -10,16 +10,16 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-white relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-[#E8524A] relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
           backgroundImage: `repeating-linear-gradient(
             45deg,
             transparent,
             transparent 10px,
-            #000 10px,
-            #000 11px
+            #fff 10px,
+            #fff 11px
           )`
         }} />
       </div>
@@ -30,18 +30,27 @@ export default function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
+          {/* Logo */}
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="/hustlr-logo.jpg" 
+              alt="HUSTLR" 
+              className="h-24 md:h-32 w-auto rounded-lg shadow-2xl"
+            />
+          </div>
+
           {/* Badge */}
           <div className="inline-block mb-8">
-            <span className="border border-black px-4 py-2 text-xs font-semibold uppercase tracking-widest">
+            <span className="border border-white px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white">
               Digital Marketing Agency
             </span>
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-none">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-none text-white">
             WE TURN
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
+            <span className="text-white/90">
               BRANDS INTO
             </span>
             <br />
@@ -49,7 +58,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed">
             Strategic digital marketing that drives measurable growth. 
             From web development to performance marketing, we build 
             the systems that scale your business.
@@ -59,13 +68,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#contact"
-              className="w-full sm:w-auto bg-black text-white px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-gray-800 transition-all transform hover:scale-105"
+              className="w-full sm:w-auto bg-white text-[#E8524A] px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
             >
               Start Your Project
             </a>
             <a
               href="#services"
-              className="w-full sm:w-auto border-2 border-black text-black px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-black hover:text-white transition-all"
+              className="w-full sm:w-auto border-2 border-white text-white px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-[#E8524A] transition-all"
             >
               Explore Services
             </a>
@@ -85,8 +94,8 @@ export default function Hero() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                 }`}
               >
-                <div className="text-3xl md:text-4xl font-black mb-2">{stat.number}</div>
-                <div className="text-sm text-gray-500 uppercase tracking-wide">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-black mb-2 text-white">{stat.number}</div>
+                <div className="text-sm text-white/60 uppercase tracking-wide">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -96,7 +105,7 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <svg
-          className="w-6 h-6 text-black"
+          className="w-6 h-6 text-white"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"

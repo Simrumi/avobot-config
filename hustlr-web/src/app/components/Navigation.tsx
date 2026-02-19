@@ -32,7 +32,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-black tracking-tighter">HUSTLR</span>
+            <img 
+              src="/hustlr-logo.jpg" 
+              alt="HUSTLR" 
+              className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'} w-auto rounded shadow-sm`}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,14 +45,22 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-black transition-colors uppercase tracking-wide"
+                className={`text-sm font-medium transition-colors uppercase tracking-wide ${
+                  isScrolled 
+                    ? "text-gray-700 hover:text-[#E8524A]" 
+                    : "text-white hover:text-white/80"
+                }`}
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="bg-black text-white px-6 py-3 text-sm font-semibold uppercase tracking-wide hover:bg-gray-800 transition-colors"
+              className={`px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-colors ${
+                isScrolled
+                  ? "bg-[#E8524A] text-white hover:bg-[#d14a43]"
+                  : "bg-white text-[#E8524A] hover:bg-white/90"
+              }`}
             >
               Start Project
             </a>
@@ -62,19 +74,19 @@ export default function Navigation() {
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <span
-                className={`w-full h-0.5 bg-black transition-all duration-300 ${
-                  isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
-                }`}
+                className={`w-full h-0.5 transition-all duration-300 ${
+                  isScrolled ? "bg-[#E8524A]" : "bg-white"
+                } ${isMobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
               />
               <span
-                className={`w-full h-0.5 bg-black transition-all duration-300 ${
-                  isMobileMenuOpen ? "opacity-0" : ""
-                }`}
+                className={`w-full h-0.5 transition-all duration-300 ${
+                  isScrolled ? "bg-[#E8524A]" : "bg-white"
+                } ${isMobileMenuOpen ? "opacity-0" : ""}`}
               />
               <span
-                className={`w-full h-0.5 bg-black transition-all duration-300 ${
-                  isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
+                className={`w-full h-0.5 transition-all duration-300 ${
+                  isScrolled ? "bg-[#E8524A]" : "bg-white"
+                } ${isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
               />
             </div>
           </button>
@@ -83,7 +95,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 bg-white z-40 transition-transform duration-300 ${
+        className={`md:hidden fixed inset-0 bg-[#E8524A] z-40 transition-transform duration-300 ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{ top: "80px" }}
@@ -93,7 +105,7 @@ export default function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              className="text-2xl font-semibold text-black uppercase tracking-wide"
+              className="text-2xl font-semibold text-white uppercase tracking-wide"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
@@ -101,7 +113,7 @@ export default function Navigation() {
           ))}
           <a
             href="#contact"
-            className="bg-black text-white px-8 py-4 text-lg font-semibold uppercase tracking-wide"
+            className="bg-white text-[#E8524A] px-8 py-4 text-lg font-semibold uppercase tracking-wide rounded"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Start Project
