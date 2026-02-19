@@ -46,7 +46,7 @@ export default function Clients() {
 
         {/* Client Logos Grid */}
         <div
-          className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center transition-all duration-1000 ${
+          className={`flex flex-wrap justify-center gap-8 md:gap-12 items-center transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
