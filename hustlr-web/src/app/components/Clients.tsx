@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const clients = [
-  { name: "Melissa", url: "https://melissa.my/", image: "/melissa-logo.png" },
+  { name: "Melissa", url: "https://melissa.my/", image: "/melissa-logo.webp" },
   { name: "Nature's Wonders", url: "#", image: "/natures-wonders-logo.png" },
   { name: "Alibaba", url: "#" },
   { name: "Honda", url: "#" },
