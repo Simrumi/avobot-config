@@ -8,7 +8,6 @@ const clients = [
   { name: "Alibaba", url: "#" },
   { name: "Honda", url: "#" },
   { name: "Axiata", url: "#" },
-  { name: "Mr. Money TV", url: "#" },
 ];
 
 export default function Clients() {
@@ -77,9 +76,6 @@ export default function Clients() {
                     )}
                     {client.name === "Axiata" && (
                       <span className="font-bold">axiata</span>
-                    )}
-                    {client.name === "Mr. Money TV" && (
-                      <span className="text-sm md:text-base">Mr. Money<br/><span className="text-xs">TV</span></span>
                     )}
                   </div>
                 )}

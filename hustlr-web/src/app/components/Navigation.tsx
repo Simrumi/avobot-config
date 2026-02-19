@@ -32,11 +32,9 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img 
-              src="/hustlr-logo.jpg" 
-              alt="HUSTLR" 
-              className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'} w-auto rounded shadow-sm`}
-            />
+            <span className={`font-black tracking-tighter transition-all duration-300 ${isScrolled ? 'text-xl text-[#E8524A]' : 'text-2xl text-white'}`}>
+              HUSTLR
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

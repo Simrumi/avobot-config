@@ -103,32 +103,20 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right: Visual */}
+          {/* Right: Visual - Teamwork Image */}
           <div
             className={`relative transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <div className="aspect-square bg-[#E8524A] relative overflow-hidden rounded-lg shadow-2xl">
-              {/* Abstract Pattern */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute inset-0" style={{
-                  backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-                  backgroundSize: '40px 40px'
-                }} />
-              </div>
-              
-              {/* Center Text */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-8xl font-black tracking-tighter mb-4">H</div>
-                  <div className="text-sm uppercase tracking-widest">EST. 2018</div>
-                </div>
-              </div>
-
-              {/* Corner Accents */}
-              <div className="absolute top-0 left-0 w-20 h-20 border-l-2 border-t-2 border-white/30"></div>
-              <div className="absolute bottom-0 right-0 w-20 h-20 border-r-2 border-b-2 border-white/30"></div>
+            <div className="aspect-square relative overflow-hidden rounded-lg shadow-2xl">
+              <img 
+                src="/teamwork.jpg" 
+                alt="HUSTLR Team" 
+                className="w-full h-full object-cover"
+              />
+              {/* Subtle orange overlay for brand consistency */}
+              <div className="absolute inset-0 bg-[#E8524A]/10"></div>
             </div>
           </div>
         </div>

@@ -30,22 +30,6 @@ export default function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* Logo */}
-          <div className="mb-8 flex justify-center">
-            <img 
-              src="/hustlr-logo.jpg" 
-              alt="HUSTLR" 
-              className="h-24 md:h-32 w-auto rounded-lg shadow-2xl"
-            />
-          </div>
-
-          {/* Badge */}
-          <div className="inline-block mb-8">
-            <span className="border border-white px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white">
-              Digital Marketing Agency
-            </span>
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-none text-white">
             WE TURN
