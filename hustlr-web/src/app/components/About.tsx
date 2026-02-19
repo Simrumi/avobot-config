@@ -87,7 +87,7 @@ export default function About() {
             </div>
 
             {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-gray-200">
+            <div className="grid grid-cols-2 gap-8 mt-12 pt-12 border-t border-gray-200">
               <div>
                 <div className="text-3xl font-black mb-1 text-[#E8524A]">7+</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wide">Years Active</div>
@@ -95,10 +95,6 @@ export default function About() {
               <div>
                 <div className="text-3xl font-black mb-1 text-[#E8524A]">25</div>
                 <div className="text-sm text-gray-500 uppercase tracking-wide">Team Members</div>
-              </div>
-              <div>
-                <div className="text-3xl font-black mb-1 text-[#E8524A]">3</div>
-                <div className="text-sm text-gray-500 uppercase tracking-wide">Global Offices</div>
               </div>
             </div>
           </div>
