@@ -1,211 +1,41 @@
-# ============================================
-# API KEYS & SECRETS - NEVER COMMIT THESE
-# ============================================
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Environment variables
-.env
-.env.*
-.env.local
-.env.development
-.env.production
-.env.test
-.envrc
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# API Keys - Common patterns
-*api*key*
-*api_key*
-*api-key*
-*API_KEY*
-*api*secret*
-*api_secret*
-*API_SECRET*
-*secret*key*
-*secret_key*
-*SECRET_KEY*
-*access*key*
-*access_key*
-*ACCESS_KEY*
-*private*key*
-*private_key*
-*PRIVATE_KEY*
+# testing
+/coverage
 
-# Token files
-*token*
-*TOKEN*
-*.token
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
 *.pem
-*.key
-*.p12
-*.pfx
-*.cert
-*.crt
 
-# Secrets directories
-secrets/
-secrets.*
-.secret/
-secret/
-.credentials/
-credentials/
-
-# Config files with credentials
-config.json
-config.yaml
-config.yml
-!config.example.json
-!config.example.yaml
-!config.example.yml
-
-# ============================================
-# DATABASE & INFRASTRUCTURE
-# ============================================
-
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-*.mdb
-*.ldb
-
-# Docker
-.dockerignore
-docker-compose.override.yml
-
-# ============================================
-# DEPENDENCIES & BUILD
-# ============================================
-
-# Node.js
-node_modules/
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
-yarn.lock
 .pnpm-debug.log*
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-Pipfile.lock
-poetry.lock
+# env files (can opt-in for committing if needed)
+.env*
 
-# Ruby
-*.gem
-*.rbc
-.bundle/
-vendor/
-Gemfile.lock
+# vercel
+.vercel
 
-# Java
-*.class
-*.jar
-*.war
-*.ear
-target/
-
-# Go
-vendor/
-go.sum
-
-# Rust
-target/
-Cargo.lock
-
-# ============================================
-# IDE & EDITOR FILES
-# ============================================
-
-# VS Code
-.vscode/
-*.code-workspace
-
-# JetBrains
-.idea/
-*.iml
-*.iws
-*.ipr
-
-# Vim
-*.swp
-*.swo
-*~
-
-# Emacs
-*~
-\#*\#
-
-# Sublime
-*.sublime-project
-*.sublime-workspace
-
-# ============================================
-# OS FILES
-# ============================================
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# Linux
-*~
-.nfs*
-
-# ============================================
-# LOGS & TEMP FILES
-# ============================================
-
-*.log
-logs/
-log/
-tmp/
-temp/
-*.tmp
-*.temp
-*.cache
-cache/
-
-# ============================================
-# BACKUP FILES
-# ============================================
-
-*.bak
-*.backup
-*.old
-*.orig
-*.save
-*.swp
-*.swo
-*~
-
-# ============================================
-# PROJECT SPECIFIC
-# ============================================
-
-# OpenClaw local files
-.openclaw/
+# typescript
+*.tsbuildinfo
+next-env.d.ts
