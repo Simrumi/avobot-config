@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "HUSTLR | Digital Marketing Agency",
-  description: "Premium digital marketing services: Web Development, Social Media Management, Content Creation & Performance Marketing.",
+  title: "HUSTLR | AI Solutions for Malaysian & Singaporean Businesses",
+  description: "We build custom AI agents, workflow automations, and AI applications for SMEs in Malaysia and Singapore. Save 20+ hours a week without hiring engineers.",
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' }
