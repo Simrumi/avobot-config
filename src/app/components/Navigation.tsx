@@ -31,9 +31,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
             <span className={`font-black tracking-tighter transition-all duration-300 ${isScrolled ? 'text-xl text-[#E8524A]' : 'text-2xl text-white'}`}>
               HUSTLR
+            </span>
+            <span className={`hidden sm:inline text-[10px] font-semibold uppercase tracking-widest px-2 py-1 rounded transition-all duration-300 ${isScrolled ? 'bg-[#E8524A]/10 text-[#E8524A]' : 'bg-white/20 text-white/80'}`}>
+              AI Solutions
             </span>
           </Link>
 
@@ -60,7 +63,7 @@ export default function Navigation() {
                   : "bg-white text-[#E8524A] hover:bg-white/90"
               }`}
             >
-              Start Project
+              Get a Free AI Audit
             </a>
           </div>
 
@@ -114,7 +117,7 @@ export default function Navigation() {
             className="bg-white text-[#E8524A] px-8 py-4 text-lg font-semibold uppercase tracking-wide rounded"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Start Project
+            Get a Free AI Audit
           </a>
         </div>
       </div>
