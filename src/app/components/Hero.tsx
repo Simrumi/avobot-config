@@ -32,45 +32,46 @@ export default function Hero() {
         >
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-none text-white">
-            WE TURN
+            YOUR BUSINESS
             <br />
             <span className="text-white/90">
-              BRANDS INTO
+              RUNS ON AI.
             </span>
             <br />
-            MOVEMENTS
+            YOU JUST DON&apos;T
+            <br />
+            KNOW IT YET.
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Strategic digital marketing that drives measurable growth. 
-            From web development to performance marketing, we build 
-            the systems that scale your business.
+            We build AI agents and automations that save Malaysian and
+            Singaporean SMEs 20+ hours a week — without hiring a single engineer.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#contact"
+              href="#services"
               className="w-full sm:w-auto bg-white text-[#E8524A] px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-white/90 transition-all transform hover:scale-105 shadow-lg"
             >
-              Start Your Project
+              See What AI Can Do For You
             </a>
             <a
-              href="#services"
+              href="#contact"
               className="w-full sm:w-auto border-2 border-white text-white px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-[#E8524A] transition-all"
             >
-              Explore Services
+              Get a Free AI Audit
             </a>
           </div>
 
           {/* Stats */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {[
-              { number: "50+", label: "Brands Scaled" },
-              { number: "$10M+", label: "Revenue Generated" },
+              { number: "50+", label: "Businesses Automated" },
+              { number: "20+", label: "Hours Saved Weekly" },
               { number: "98%", label: "Client Retention" },
-              { number: "5★", label: "Average Rating" },
+              { number: "🇲🇾 🇸🇬", label: "Malaysia & Singapore" },
             ].map((stat, index) => (
               <div
                 key={index}
