@@ -1,28 +1,32 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Target, Zap, Users, Award } from "lucide-react";
+import { MessageCircle, BarChart3, Globe, Users } from "lucide-react";
 
 const values = [
   {
-    icon: Target,
-    title: "Results-First",
-    description: "We measure success by your bottom line, not vanity metrics. Every strategy is tied to revenue growth.",
+    icon: MessageCircle,
+    title: "Plain Language",
+    description:
+      "We explain everything in terms you understand. No jargon, no buzzwords, no fluff.",
   },
   {
-    icon: Zap,
-    title: "Rapid Execution",
-    description: "Speed matters in digital. We move fast without sacrificing quality, getting your campaigns live in days, not weeks.",
+    icon: BarChart3,
+    title: "Results You Can Measure",
+    description:
+      "Every AI solution comes with a clear ROI projection. If it doesn\u2019t save you time or money, we don\u2019t build it.",
+  },
+  {
+    icon: Globe,
+    title: "Built for SEA",
+    description:
+      "We understand Malaysian and Singaporean businesses. Our solutions work in English, Malay, and Mandarin.",
   },
   {
     icon: Users,
-    title: "True Partnership",
-    description: "We embed ourselves in your business. Your goals become our goals. Your wins are our wins.",
-  },
-  {
-    icon: Award,
-    title: "Excellence Obsession",
-    description: "Good enough isn't in our vocabulary. We iterate until every pixel, every word, every metric performs at its peak.",
+    title: "Your Team, Extended",
+    description:
+      "We don\u2019t just deliver and disappear. We train your team, maintain your systems, and grow with you.",
   },
 ];
 
@@ -62,27 +66,27 @@ export default function About() {
               About HUSTLR
             </span>
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8">
-              WE&apos;RE NOT AN
+              WE MAKE AI
               <br />
-              <span className="text-gray-400">AGENCY.</span>
+              <span className="text-gray-400">SIMPLE FOR</span>
               <br />
-              WE&apos;RE YOUR
+              BUSINESSES
               <br />
-              <span className="text-[#E8524A]">GROWTH TEAM.</span>
+              <span className="text-[#E8524A]">THAT BUILD ASIA.</span>
             </h2>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
-                Founded with a simple belief: digital marketing should drive 
-                measurable business growth, not just look pretty in presentations.
+                Most AI agencies talk to engineers. We talk to business owners.
               </p>
               <p>
-                We&apos;ve built a team of strategists, creators, and technologists 
-                who are obsessed with one thing — scaling brands that refuse to settle.
+                We started HUSTLR because we saw SMEs across Malaysia and Singapore
+                getting left behind in the AI wave — not because they didn&apos;t want to
+                adopt it, but because nobody explained it in plain language.
               </p>
               <p>
-                From startups to Fortune 500s, we bring the same energy: 
-                aggressive growth targets, transparent reporting, and a partnership 
-                that feels like an extension of your internal team.
+                We&apos;re a team of builders who speak both tech and business. We don&apos;t
+                sell hype. We build AI that saves you time, cuts your costs, and
+                makes your team more effective — then we show you the numbers to prove it.
               </p>
             </div>
 
