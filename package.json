@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "blog:image": "tsx scripts/generate-blog-image.ts"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -18,13 +19,16 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
+    "@google/genai": "^1.50.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }
