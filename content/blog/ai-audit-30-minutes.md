@@ -8,7 +8,7 @@ date: '2026-04-14'
 author: HUSTLR Team
 category: Practical Guide
 readingTime: 8 min read
-image: /blog/ai-audit-30-minutes.png
+image: /blog/ai-audit-30-minutes.webp
 ---
 
 Most business owners think an "AI audit" requires a specialist, a workshop, and a four-figure invoice.

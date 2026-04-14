@@ -8,7 +8,7 @@ date: '2026-04-14'
 author: HUSTLR Team
 category: Educational
 readingTime: 7 min read
-image: /blog/what-is-an-ai-agent.png
+image: /blog/what-is-an-ai-agent.webp
 ---
 
 If you've been on LinkedIn in the last twelve months, you've seen the phrase "AI agent" at least a hundred times. Tech companies talk about them like they're the future of work. Consultants charge RM15,000 to explain them.

@@ -16,6 +16,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { config } from "dotenv";
 import matter from "gray-matter";
+import sharp from "sharp";
 import { GoogleGenAI } from "@google/genai";
 
 // Load env from .env.local (Next.js convention, already gitignored).
@@ -32,6 +33,10 @@ if (!apiKey) {
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 const OUTPUT_DIR = path.join(process.cwd(), "public/blog");
 const MODEL = "gemini-2.5-flash-image";
+
+// Output tuning — target ~150-250KB per image.
+const MAX_WIDTH = 1600;
+const WEBP_QUALITY = 82;
 
 // HUSTLR brand colour used in prompts.
 const BRAND_RED = "#E8524A (a warm coral-red)";
@@ -116,6 +121,19 @@ function updateFrontmatter(post: Post, imagePath: string): void {
   fs.writeFileSync(post.filePath, fileContent, "utf8");
 }
 
+async function optimizeToWebp(pngBuffer: Buffer): Promise<Buffer> {
+  return sharp(pngBuffer)
+    .resize({ width: MAX_WIDTH, withoutEnlargement: true })
+    .webp({ quality: WEBP_QUALITY, effort: 6 })
+    .toBuffer();
+}
+
+function removeIfExists(filePath: string): void {
+  if (fs.existsSync(filePath)) {
+    fs.unlinkSync(filePath);
+  }
+}
+
 async function processPost(slug: string): Promise<void> {
   const post = loadPost(slug);
   const prompt = buildPrompt(post);
@@ -123,15 +141,21 @@ async function processPost(slug: string): Promise<void> {
   console.log(`\n[${slug}] Generating image…`);
   console.log(`  Title: ${post.data.title}`);
 
-  const imageBuffer = await generateImage(prompt);
-  const outputPath = path.join(OUTPUT_DIR, `${slug}.png`);
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  fs.writeFileSync(outputPath, imageBuffer);
+  const pngBuffer = await generateImage(prompt);
+  const webpBuffer = await optimizeToWebp(pngBuffer);
 
-  const publicPath = `/blog/${slug}.png`;
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  const outputPath = path.join(OUTPUT_DIR, `${slug}.webp`);
+  fs.writeFileSync(outputPath, webpBuffer);
+
+  // Remove any stale PNG from previous runs.
+  removeIfExists(path.join(OUTPUT_DIR, `${slug}.png`));
+
+  const publicPath = `/blog/${slug}.webp`;
   updateFrontmatter(post, publicPath);
 
-  console.log(`  Saved: ${outputPath}`);
+  const sizeKB = Math.round(webpBuffer.length / 1024);
+  console.log(`  Saved: ${outputPath} (${sizeKB}KB)`);
   console.log(`  Frontmatter updated: image: ${publicPath}`);
 }
 

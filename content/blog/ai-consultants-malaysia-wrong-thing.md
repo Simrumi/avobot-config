@@ -8,7 +8,7 @@ date: '2026-04-14'
 author: HUSTLR Team
 category: Opinion
 readingTime: 6 min read
-image: /blog/ai-consultants-malaysia-wrong-thing.png
+image: /blog/ai-consultants-malaysia-wrong-thing.webp
 ---
 
 I'll say the quiet part out loud.
