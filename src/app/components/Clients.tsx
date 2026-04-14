@@ -87,16 +87,17 @@ export default function Clients() {
         {/* Testimonial Preview */}
         <div className="mt-20 max-w-4xl mx-auto text-center">
           <blockquote className="text-2xl md:text-3xl font-medium text-gray-800 leading-relaxed mb-8">
-            &ldquo;HUSTLR transformed our digital presence. Their strategic approach 
-            to content and performance marketing delivered a 340% ROI in the first quarter.&rdquo;
+            &ldquo;HUSTLR automated our entire customer response workflow. What
+            used to take our team 4 hours a day now runs on its own — and
+            our response time dropped from 12 hours to under 2 minutes.&rdquo;
           </blockquote>
           <div className="flex items-center justify-center gap-4">
             <div className="w-12 h-12 bg-[#E8524A] rounded-full flex items-center justify-center text-white font-bold">
-              M
+              O
             </div>
             <div className="text-left">
-              <div className="font-semibold">Marketing Director</div>
-              <div className="text-sm text-gray-500">Fortune 500 Brand</div>
+              <div className="font-semibold">Operations Director</div>
+              <div className="text-sm text-gray-500">E-commerce Brand</div>
             </div>
           </div>
         </div>
