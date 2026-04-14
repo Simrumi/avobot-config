@@ -39,16 +39,16 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4 block">
-            Start Your Project
+            Start Your AI Journey
           </span>
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6">
-            LET&apos;S BUILD
+            LET&apos;S FIND YOUR
             <br />
-            <span className="text-white/70">SOMETHING GREAT</span>
+            <span className="text-white/70">BIGGEST AI WIN</span>
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Ready to scale? Tell us about your project and we&apos;ll get back 
-            to you with a strategic roadmap.
+            Book a free AI audit — we&apos;ll show you exactly where AI can
+            save you time and money, with no obligation.
           </p>
         </div>
 
@@ -123,11 +123,11 @@ export default function Contact() {
                       className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors bg-white rounded"
                     >
                       <option value="">Select a service</option>
-                      <option value="web">Web Development</option>
-                      <option value="social">Social Media Management</option>
-                      <option value="content">Content Creation</option>
-                      <option value="performance">Performance Marketing</option>
-                      <option value="full">Full Service Package</option>
+                      <option value="agents">Custom AI Agents</option>
+                      <option value="automation">AI Workflow Automation</option>
+                      <option value="consulting">AI Consulting & Strategy</option>
+                      <option value="apps">AI App Development</option>
+                      <option value="unsure">Not Sure — Help Me Decide</option>
                     </select>
                   </div>
                 </div>
@@ -143,10 +143,10 @@ export default function Contact() {
                     className="w-full px-4 py-3 border border-gray-300 focus:border-[#E8524A] focus:outline-none transition-colors bg-white rounded"
                   >
                     <option value="">Select budget range</option>
-                    <option value="5k-10k">$5,000 - $10,000</option>
-                    <option value="10k-25k">$10,000 - $25,000</option>
-                    <option value="25k-50k">$25,000 - $50,000</option>
-                    <option value="50k+">$50,000+</option>
+                    <option value="5k-15k">RM5,000 - RM15,000</option>
+                    <option value="15k-30k">RM15,000 - RM30,000</option>
+                    <option value="30k-50k">RM30,000 - RM50,000</option>
+                    <option value="50k+">RM50,000+</option>
                   </select>
                 </div>
 
@@ -190,10 +190,24 @@ export default function Contact() {
           <div className="space-y-12">
             <div>
               <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-              <p className="text-white/70 leading-relaxed mb-8">
-                Whether you have a specific project in mind or just want to explore 
-                possibilities, we&apos;d love to hear from you. Every great partnership 
-                starts with a conversation.
+              <p className="text-white/70 leading-relaxed mb-4">
+                Whether you have a specific project in mind or just want to explore
+                what AI can do for your business, we&apos;d love to hear from you.
+              </p>
+              <p className="text-white/90 font-medium text-sm bg-white/10 px-4 py-3 rounded">
+                Most AI consultancies charge RM5,000–15,000 for an audit like this. Yours is free.
+              </p>
+            </div>
+
+            {/* Guarantee */}
+            <div className="bg-white/10 p-6 rounded-lg">
+              <h4 className="font-bold mb-2 flex items-center gap-2">
+                <span className="text-lg">🛡️</span> The Clarity Guarantee
+              </h4>
+              <p className="text-white/70 text-sm leading-relaxed">
+                If our free AI audit doesn&apos;t reveal at least 3 actionable ways to
+                save your business 10+ hours a week, we&apos;ll pay for your next
+                consultation with any competitor. No questions asked.
               </p>
             </div>
 
