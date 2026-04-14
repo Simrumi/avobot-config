@@ -6,10 +6,10 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { label: "Web Development", href: "#services" },
-      { label: "Social Media", href: "#services" },
-      { label: "Content Creation", href: "#services" },
-      { label: "Performance Marketing", href: "#services" },
+      { label: "Custom AI Agents", href: "#services" },
+      { label: "AI Workflow Automation", href: "#services" },
+      { label: "AI Consulting & Strategy", href: "#services" },
+      { label: "AI App Development", href: "#services" },
     ],
     company: [
       { label: "About Us", href: "#about" },
@@ -40,7 +40,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Strategic digital marketing that drives measurable growth. We turn brands into movements.
+              AI solutions that save time, cut costs, and grow revenue for Malaysian and Singaporean businesses.
             </p>
             {/* Social Icons */}
             <div className="flex gap-4">
@@ -98,7 +98,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-[#E8524A]">Stay Updated</h4>
             <p className="text-gray-400 text-sm mb-4">
-              Get the latest insights on digital marketing and growth strategies.
+              Get the latest insights on AI for Southeast Asian businesses.
             </p>
             <form className="flex">
               <input
