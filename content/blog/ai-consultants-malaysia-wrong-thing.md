@@ -1,10 +1,14 @@
 ---
-title: "Why 90% of AI Consultants in Malaysia Are Selling You the Wrong Thing"
-excerpt: "There's a new wave of AI consultants in KL and Singapore charging premium rates for strategy decks. Here's what they're really selling — and what actually moves the needle for SMEs."
-date: "2026-04-14"
-author: "HUSTLR Team"
-category: "Opinion"
-readingTime: "6 min read"
+title: Why 90% of AI Consultants in Malaysia Are Selling You the Wrong Thing
+excerpt: >-
+  There's a new wave of AI consultants in KL and Singapore charging premium
+  rates for strategy decks. Here's what they're really selling — and what
+  actually moves the needle for SMEs.
+date: '2026-04-14'
+author: HUSTLR Team
+category: Opinion
+readingTime: 6 min read
+image: /blog/ai-consultants-malaysia-wrong-thing.png
 ---
 
 I'll say the quiet part out loud.

@@ -1,10 +1,14 @@
 ---
-title: "How to Do an AI Audit on Your Business in 30 Minutes"
-excerpt: "You don't need a consultant to figure out where AI fits in your business. This simple 30-minute audit surfaces the biggest opportunities — the kind that pay for themselves in weeks."
-date: "2026-04-14"
-author: "HUSTLR Team"
-category: "Practical Guide"
-readingTime: "8 min read"
+title: How to Do an AI Audit on Your Business in 30 Minutes
+excerpt: >-
+  You don't need a consultant to figure out where AI fits in your business. This
+  simple 30-minute audit surfaces the biggest opportunities — the kind that pay
+  for themselves in weeks.
+date: '2026-04-14'
+author: HUSTLR Team
+category: Practical Guide
+readingTime: 8 min read
+image: /blog/ai-audit-30-minutes.png
 ---
 
 Most business owners think an "AI audit" requires a specialist, a workshop, and a four-figure invoice.

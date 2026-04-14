@@ -1,10 +1,14 @@
 ---
-title: "What Is an AI Agent? (Explained for Non-Technical Business Owners)"
-excerpt: "Everyone's talking about AI agents. Most explanations sound like science fiction. Here's what they actually are, what they do, and whether your business needs one."
-date: "2026-04-14"
-author: "HUSTLR Team"
-category: "Educational"
-readingTime: "7 min read"
+title: What Is an AI Agent? (Explained for Non-Technical Business Owners)
+excerpt: >-
+  Everyone's talking about AI agents. Most explanations sound like science
+  fiction. Here's what they actually are, what they do, and whether your
+  business needs one.
+date: '2026-04-14'
+author: HUSTLR Team
+category: Educational
+readingTime: 7 min read
+image: /blog/what-is-an-ai-agent.png
 ---
 
 If you've been on LinkedIn in the last twelve months, you've seen the phrase "AI agent" at least a hundred times. Tech companies talk about them like they're the future of work. Consultants charge RM15,000 to explain them.
