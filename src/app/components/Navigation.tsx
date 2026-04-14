@@ -16,10 +16,11 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#clients", label: "Clients" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#services", label: "Services" },
+    { href: "/#clients", label: "Clients" },
+    { href: "/blog", label: "Blog" },
+    { href: "/#about", label: "About" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   return (
@@ -56,7 +57,7 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               className={`px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-colors ${
                 isScrolled
                   ? "bg-[#E8524A] text-white hover:bg-[#d14a43]"

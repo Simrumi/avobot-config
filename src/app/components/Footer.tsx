@@ -6,16 +6,16 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { label: "Custom AI Agents", href: "#services" },
-      { label: "AI Workflow Automation", href: "#services" },
-      { label: "AI Consulting & Strategy", href: "#services" },
-      { label: "AI App Development", href: "#services" },
+      { label: "Custom AI Agents", href: "/#services" },
+      { label: "AI Workflow Automation", href: "/#services" },
+      { label: "AI Consulting & Strategy", href: "/#services" },
+      { label: "AI App Development", href: "/#services" },
     ],
     company: [
-      { label: "About Us", href: "#about" },
-      { label: "Our Work", href: "#clients" },
-      { label: "Careers", href: "#" },
-      { label: "Contact", href: "#contact" },
+      { label: "About Us", href: "/#about" },
+      { label: "Our Work", href: "/#clients" },
+      { label: "Blog", href: "/blog" },
+      { label: "Contact", href: "/#contact" },
     ],
     social: [
       { label: "LinkedIn", href: "#", icon: Linkedin },
