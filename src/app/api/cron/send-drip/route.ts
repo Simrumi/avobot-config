@@ -18,6 +18,7 @@ export async function POST(req: Request) {
   let processed = 0;
   let sent = 0;
   let failed = 0;
+  let retried = 0;
   let skipped = 0;
 
   const { data: candidates } = await supabase
@@ -51,10 +52,11 @@ export async function POST(req: Request) {
     const outcome = await sendScheduledEmail({ ...row, attempts: nextAttempts });
     if (outcome === "sent") sent++;
     else if (outcome === "skipped") skipped++;
+    else if (outcome === "retried") retried++;
     else failed++;
   }
 
-  const body = { processed, sent, failed, skipped, duration_ms: Date.now() - started };
+  const body = { processed, sent, failed, retried, skipped, duration_ms: Date.now() - started };
   console.log(JSON.stringify({ job: "send-drip", ...body }));
   return NextResponse.json(body);
 }

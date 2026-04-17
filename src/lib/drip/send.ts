@@ -15,7 +15,7 @@ function fromAddress(): string {
   return f;
 }
 
-export type SendOutcome = "sent" | "failed" | "skipped";
+export type SendOutcome = "sent" | "failed" | "retried" | "skipped";
 
 export async function sendScheduledEmail(row: ScheduledEmail): Promise<SendOutcome> {
   const { data: leadRow, error: leadErr } = await supabase
@@ -66,11 +66,11 @@ export async function sendScheduledEmail(row: ScheduledEmail): Promise<SendOutco
     return "sent";
   } catch (e) {
     const message = e instanceof Error ? e.message : String(e);
-    const finalStatus = row.attempts >= 3 ? "failed" : "pending";
+    const terminal = row.attempts >= 3;
     await supabase
       .from("scheduled_emails")
-      .update({ status: finalStatus, error: message })
+      .update({ status: terminal ? "failed" : "pending", error: message })
       .eq("id", row.id);
-    return finalStatus === "failed" ? "failed" : "failed";
+    return terminal ? "failed" : "retried";
   }
 }

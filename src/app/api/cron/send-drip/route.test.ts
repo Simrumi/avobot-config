@@ -36,6 +36,7 @@ describe.skipIf(!hasEnv)("POST /api/cron/send-drip", () => {
     expect(body).toHaveProperty("processed");
     expect(body).toHaveProperty("sent");
     expect(body).toHaveProperty("failed");
+    expect(body).toHaveProperty("retried");
     expect(body).toHaveProperty("skipped");
     expect(body).toHaveProperty("duration_ms");
   });
