@@ -15,7 +15,7 @@ create table leads (
   unsubscribed_at timestamptz,
   utm jsonb
 );
-create index leads_email_idx on leads (email);
+create unique index leads_email_idx on leads (email);
 
 create table scheduled_emails (
   id uuid primary key default gen_random_uuid(),

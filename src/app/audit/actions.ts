@@ -22,36 +22,19 @@ export async function submitQuiz(input: QuizInput): Promise<SubmitQuizResult> {
   const urgency = deriveUrgency(parsed);
   const team_tier = deriveTeamTier(parsed);
 
-  const existing = await supabase
+  // Determine unsubscribe state up front so we can skip drip seeding for unsubscribed leads.
+  const pre = await supabase
     .from("leads")
     .select("id,unsubscribed_at")
     .eq("email", parsed.capture.email)
     .maybeSingle();
 
-  let leadId: string;
-  let isUnsubscribed = false;
+  const isUnsubscribed = !!pre.data?.unsubscribed_at;
 
-  if (existing.data) {
-    leadId = existing.data.id;
-    isUnsubscribed = !!existing.data.unsubscribed_at;
-    const { error: updErr } = await supabase
-      .from("leads")
-      .update({
-        name: parsed.capture.name,
-        whatsapp: parsed.capture.whatsapp || null,
-        company: parsed.capture.company || null,
-        country: parsed.capture.country,
-        segment,
-        urgency,
-        team_tier,
-        answers: parsed,
-      })
-      .eq("id", leadId);
-    if (updErr) throw new Error(updErr.message);
-  } else {
-    const { data: ins, error: insErr } = await supabase
-      .from("leads")
-      .insert({
+  const { data: upserted, error: upErr } = await supabase
+    .from("leads")
+    .upsert(
+      {
         name: parsed.capture.name,
         email: parsed.capture.email,
         whatsapp: parsed.capture.whatsapp || null,
@@ -61,12 +44,13 @@ export async function submitQuiz(input: QuizInput): Promise<SubmitQuizResult> {
         urgency,
         team_tier,
         answers: parsed,
-      })
-      .select("id")
-      .single();
-    if (insErr || !ins) throw new Error(insErr?.message ?? "insert failed");
-    leadId = ins.id;
-  }
+      },
+      { onConflict: "email" }
+    )
+    .select("id")
+    .single();
+  if (upErr || !upserted) throw new Error(upErr?.message ?? "upsert failed");
+  const leadId = upserted.id;
 
   if (!isUnsubscribed) {
     await supabase
