@@ -1,22 +1,9 @@
 import { NextResponse } from "next/server";
-import { createHmac, timingSafeEqual } from "node:crypto";
+import { Webhook } from "svix";
 import { supabase } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-
-function verifySignature(raw: string, signature: string | null): boolean {
-  const secret = process.env.RESEND_WEBHOOK_SECRET;
-  if (!secret || !signature) return false;
-  const expected = createHmac("sha256", secret).update(raw).digest("hex");
-  try {
-    const a = Buffer.from(expected, "hex");
-    const b = Buffer.from(signature, "hex");
-    return a.length === b.length && timingSafeEqual(a, b);
-  } catch {
-    return false;
-  }
-}
 
 type ResendEvent = {
   type: string;
@@ -30,13 +17,33 @@ type ResendEvent = {
 
 export async function POST(req: Request) {
   const raw = await req.text();
-  const sig = req.headers.get("svix-signature") ?? req.headers.get("resend-signature");
-  if (!verifySignature(raw, sig)) {
+  const secret = process.env.RESEND_WEBHOOK_SECRET;
+  if (!secret) {
+    return NextResponse.json({ error: "not configured" }, { status: 500 });
+  }
+
+  const svixId = req.headers.get("svix-id");
+  const svixTimestamp = req.headers.get("svix-timestamp");
+  const svixSignature = req.headers.get("svix-signature");
+  if (!svixId || !svixTimestamp || !svixSignature) {
     return NextResponse.json({ error: "invalid signature" }, { status: 401 });
   }
 
-  const evt = JSON.parse(raw) as ResendEvent;
-  const refId = evt.data?.headers?.["X-Entity-Ref-ID"] ?? evt.data?.headers?.["x-entity-ref-id"];
+  let evt: ResendEvent;
+  try {
+    const wh = new Webhook(secret);
+    evt = wh.verify(raw, {
+      "svix-id": svixId,
+      "svix-timestamp": svixTimestamp,
+      "svix-signature": svixSignature,
+    }) as ResendEvent;
+  } catch {
+    return NextResponse.json({ error: "invalid signature" }, { status: 401 });
+  }
+
+  const refId =
+    evt.data?.headers?.["X-Entity-Ref-ID"] ??
+    evt.data?.headers?.["x-entity-ref-id"];
   const eventType = evt.type.replace(/^email\./, "");
 
   if (!refId) return NextResponse.json({ ok: true });
