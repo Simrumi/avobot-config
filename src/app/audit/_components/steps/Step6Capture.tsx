@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { QuizAnswers } from "@/types/quiz";
-import { ContinueButton, StepHeading } from "./_shared";
+import { StepHeading } from "./_shared";
 
 type CaptureFields = QuizAnswers["capture"];
 
@@ -91,12 +91,13 @@ export default function Step6Capture({
       {(localError || error) && (
         <p className="mt-4 text-[#E8524A] font-semibold">{localError ?? error}</p>
       )}
-      <ContinueButton
-        onClick={() => (document.activeElement as HTMLElement)?.blur()}
+      <button
+        type="submit"
         disabled={isPending}
-        label={isPending ? "SENDING…" : "GET MY AUDIT"}
-      />
-      <input type="submit" hidden />
+        className="mt-8 w-full md:w-auto bg-[#E8524A] text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#d14a43] transition-colors disabled:opacity-50 rounded"
+      >
+        {isPending ? "SENDING…" : "GET MY AUDIT"}
+      </button>
     </form>
   );
 }
