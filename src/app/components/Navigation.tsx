@@ -57,7 +57,7 @@ export default function Navigation() {
               </a>
             ))}
             <a
-              href="/#contact"
+              href="/audit"
               className={`px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-colors ${
                 isScrolled
                   ? "bg-[#E8524A] text-white hover:bg-[#d14a43]"
@@ -114,7 +114,7 @@ export default function Navigation() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/audit"
             className="bg-white text-[#E8524A] px-8 py-4 text-lg font-semibold uppercase tracking-wide rounded"
             onClick={() => setIsMobileMenuOpen(false)}
           >

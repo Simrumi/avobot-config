@@ -58,7 +58,7 @@ export default function Hero() {
               See What AI Can Do For You
             </a>
             <a
-              href="#contact"
+              href="/audit"
               className="w-full sm:w-auto border-2 border-white text-white px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-[#E8524A] transition-all"
             >
               Get a Free AI Audit
