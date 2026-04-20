@@ -60,7 +60,9 @@ export async function submitQuiz(input: QuizInput): Promise<SubmitQuizResult> {
       .eq("status", "pending");
 
     const rows = buildDripRows({ leadId, segment, now: new Date() });
-    const { error: seedErr } = await supabase.from("scheduled_emails").insert(rows);
+    const { error: seedErr } = await supabase
+      .from("scheduled_emails")
+      .upsert(rows, { onConflict: "lead_id,template_key", ignoreDuplicates: true });
     if (seedErr) throw new Error(seedErr.message);
   }
 
