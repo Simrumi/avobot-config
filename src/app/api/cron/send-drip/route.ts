@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   let retried = 0;
   let skipped = 0;
 
-  const { data: candidates } = await supabase
+  const { data: candidates, error: queryErr } = await supabase
     .from("scheduled_emails")
     .select("id")
     .eq("status", "pending")
@@ -29,6 +29,16 @@ export async function POST(req: Request) {
     .lt("attempts", 3)
     .order("send_at", { ascending: true })
     .limit(50);
+
+  if (queryErr) {
+    console.error(
+      JSON.stringify({ job: "send-drip", error: queryErr.message })
+    );
+    return NextResponse.json(
+      { error: "candidate query failed", detail: queryErr.message },
+      { status: 500 }
+    );
+  }
 
   for (const c of candidates ?? []) {
     const { data: claimed } = await supabase
